@@ -1,7 +1,18 @@
+import java.util.Scanner;
+
 public class Arrays {
     public static void main(String []args) {
-        int nums[] = {1, 2, 2, 4, 5, 6, 3};
-        int element = 3;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Size Of Array: ");
+        int size = sc.nextInt();
+        int nums[] = new int[size];
+        //Input the array
+        System.out.println("Enter Elements of array: ");
+        for(int i = 0; i < nums.length; i++) {
+            nums[i] = sc.nextInt();
+        }
+        System.out.println("Enter Your Target: ");
+        int element = sc.nextInt();
         Element obj = new Element();
         int index = obj.findIndexOfArray(nums, element);
         if(index == -1) {
